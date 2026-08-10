@@ -15,8 +15,25 @@ Four tables model the fraud domain:
 - **`card_data`** — card details per customer (type, network, credit limit, status)
 - **`merchant`** — merchant profile (category, risk level, rating, status)
 - **`transactions`** — transaction-level records linking customer, card, and merchant, including `fraud_flag` and `fraud_reason`
+![Table Relationship](Screenshots/table_relationship.png)
 
 ```sql
+create type gender as ENUM ('Male', 'Female');
+create type marital_status as ENUM ('Single', 'Married', 'Divorsed');
+create type cust_segment as ENUM ('Basic', 'Gold', 'Platinum', 'Standard');
+create type account_type as ENUM ('Savings', 'Salary', 'Current', 'Student');
+create type card_status as ENUM ('Active', 'Expired', 'Blocked', 'Lost');
+create type card_mode as ENUM ('Physical', 'Virtual');
+create type contactless as ENUM ('Yes', 'No');
+create type card_type as ENUM ('Classic', 'Gold', 'Platinum', 'Silver');
+create type card_network as ENUM ('American Express', 'Mastercard', 'RuPay', 'Visa');
+create type merchant_risk_level as ENUM ('Low', 'Medium', 'High');
+create type merchant_status as ENUM ('Active', 'Inactive');
+create type payment_method as ENUM ('Credit Card', 'Debit Card', 'Net Banking', 'UPI');
+create type transaction_channel as ENUM ('ATM', 'Mobile App', 'Online Web', 'POS');
+create type transaction_status as ENUM ('Declined', 'Failed', 'Successful');
+
+
 create table customer_data(
 customer_id text unique not null primary key,
 customer_name text not null,
@@ -255,4 +272,4 @@ order by c.first_number asc;
 ---
 
 ## Key Skills Demonstrated
-Window functions (`LEAD`, `PARTITION BY`), CTEs, `FILTER` clauses, timestamp arithmetic for fraud-pattern detection, and multi-table joins across a normalized schema.
+Window functions (`LEAD`, `PARTITION BY`,`ORDER BY`), CTEs, Subqueries, `FILTER` clauses, timestamp arithmetic for fraud-pattern detection, and multi-table joins across a normalized schema.
