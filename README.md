@@ -1,9 +1,17 @@
-# Indian Financial Fraud Analysis (SQL)
+# Indian Financial Fraud Analysis & Dashboard (SQL & PowerBI)
 
 A PostgreSQL project analyzing credit/debit card transactions to detect fraud patterns, quantify losses, and flag risky behavior — built as a portfolio piece to demonstrate SQL skills relevant to a data analyst role (window functions, CTEs, joins, aggregation).
 
-**Tech stack:** PostgreSQL
+A PowerBI based dashboard where fraud stats are visualized based on different filters, fraud patterns are detected and help in formulating better fraud detection algorithms. Static data are imported to fasten the dashboard loading and variable/real-time/SQL based are imported filtered by SQL queries from localhost server to give real time update.
+
+
+**Tech stack:** 
+
+PostgreSQL
 **File:** [`indian_fraud_analysis.sql`](./indian_fraud_analysis.sql)
+
+PowerBI
+**File:** [`financial_fraud.pbix`](./financial_fraud.pbix)
 
 ---
 
@@ -16,6 +24,17 @@ Four tables model the fraud domain:
 - **`merchant`** — merchant profile (category, risk level, rating, status)
 - **`transactions`** — transaction-level records linking customer, card, and merchant, including `fraud_flag` and `fraud_reason`
 ![Table Relationship](Screenshots/table_relationship.png)
+---
+
+## Dashboards
+### Executive dashboard
+It is to summarize and visualize general fraud related stats; basic, sorted and an overview of the frauds.
+![Executive Dashboard](Screenshots/executive_dashboard.png)
+
+### Merchant dashboard
+This dashboard filters out all the information of or related to merchant, formulate patterns and narrow down the fraud patterns.
+![Merchant Dashboard](Screenshots/merchant_dashboard.png)
+
 ---
 
 ## Queries
@@ -193,3 +212,5 @@ order by c.first_number asc;
 
 ## Key Skills Demonstrated
 Window functions (`LEAD`, `PARTITION BY`,`ORDER BY`), CTEs, Subqueries, `FILTER` clauses, timestamp arithmetic for fraud-pattern detection, and multi-table joins across a normalized schema.
+
+PowerBI, `DAX`, measures and calculated columns, KPIs, cards and filters.
