@@ -8,8 +8,7 @@ A PowerBI based dashboard where fraud stats are visualized based on different fi
 **Tech stack:** 
 
 PostgreSQL
-**File:** [`indian_fraud_analysis.sql`](./indian_fraud_analysis.sql)
-
+**File:** [`indian_fraud_analysis.sql`](./indian_fraud_analysis.sql) \
 PowerBI
 **File:** [`financial_fraud.pbix`](./financial_fraud.pbix)
 
