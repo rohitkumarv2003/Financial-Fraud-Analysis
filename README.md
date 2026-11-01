@@ -30,10 +30,20 @@ Four tables model the fraud domain:
 It is to summarize and visualize general fraud related stats; basic, sorted and an overview of the frauds.
 ![Executive Dashboard](Screenshots/executive_dashboard.png)
 
+### Business Analysis
+- `80%` of the fraud happened from the physical mode of payments with `85%` of them were ***Contactless***.
+- Around `25%` of the total transactional amount have frauds in it.
+- Net fraud percentage declines in Q3 and Q4.
+---
+
 ### Merchant dashboard
 This dashboard filters out all the information of or related to merchant, formulate patterns and narrow down the fraud patterns.
 ![Merchant Dashboard](Screenshots/merchant_dashboard.png)
 
+### Business Analysis
+- Low merchant risk level flagged more than `60%` of the frauds.
+- Table shows potential shell companies with higher international transactions than their industry average.
+- Benford's Law confirms our data.
 ---
 
 ## Queries
